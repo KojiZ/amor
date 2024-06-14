@@ -2,7 +2,7 @@ function login() {
     const email = document.getElementById("email").value;
     const senha = document.getElementById("senha").value;
     const log = document.getElementById("log");
-    const divLoading = document.getElementById("cu");
+    const divLoading = document.getElementById("loading");
     if (email === "" && senha === "") {
         log.style.display = "block";
         log.innerHTML = "Por favor, preencha os campos.";
@@ -47,7 +47,7 @@ function login() {
             if (data.success) {
                 console.log(data);
                 setTimeout(function () {
-                    window.location.href = "./dashboard.php";
+                    window.location.href = "./home.php";
                 }, 2000);
                 log.style.display = "block";
                 log.classList.remove("alert-danger");
@@ -73,11 +73,11 @@ function mostrarProcessando() {
     divProcessando.style.transform = "translate(-50%, -50%)";
     divProcessando.innerHTML =
         '<img src="./img/loading.gif" width="150px" alt="Processando..." title="Processando...">';
-    cu.appendChild(divProcessando);
+    loading.appendChild(divProcessando);
 }
 function esconderProcessando() {
     const divProcessando = document.getElementById("processandoDiv");
     if (divProcessando) {
-        cu.removeChild(divProcessando);
+        loading.removeChild(divProcessando);
     }
 }

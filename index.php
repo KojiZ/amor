@@ -1,42 +1,39 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Saep</title>
+    <title>SAEP</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 
 <body>
-
-    <div class="container w-50 b-1">
-        <div class="card mt-5">
-            <div class="card-body">
-                <div class="row">
-                    <div class="col-12">
-                        <center>
-                            <h1>Bem-Vindo</h1>
-                        </center>
-                    </div>
-                    <div class="col-12">
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Digite o seu email">
+    <div class="container" style="margin-top:15%">
+        <center>
+            <div class="card w-50">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="mb-3">
-                            <label for="senha" class="form-label">Senha</label>
-                            <input type="password" class="form-control" id="senha" name="senha" placeholder="Digite a sua senha">
+                        <div class="col-12">
+                            <div class="mb-3">
+                                <label for="senha" class="form-label">Senha</label>
+                                <input type="password" class="form-control" id="senha" name="senha">
+                            </div>
                         </div>
+                        <div class="alert alert-success" id="log" role="alert" style="display:none">
+                            A simple dark alert—check it out!
+                        </div>
+                        <div id="loading"></div>
+                        <center><button class="btn btn-outline-success" style="width:20%" onclick="login()">Entrar</button></center>
                     </div>
-                    <div class="alert alert-light " role="alert" style="display: none;;border-color:white;" id="log" name="log">A simple light alert—check it out!</div>
-                    <div id="cu"></div>
-                    <center><button class="btn btn-outline-dark w-50" onclick="login();">Entrar</button></center>
                 </div>
-            </div>
-        </div>
+        </center>
     </div>
 
     <script src="js/script.js"></script>
